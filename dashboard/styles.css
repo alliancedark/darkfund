@@ -1,0 +1,320 @@
+/* General styling for content */
+body {
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
+    font-family: sans-serif;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and button */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below header */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust title size if needed */
+    color: #0066cc; /* Blue color for title */
+}
+
+header button {
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center icon and text */
+    background-color: #0066cc; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+header button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Form Section */
+#form-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Space between form and summary */
+}
+
+#form-section h2 {
+    margin-bottom: 5px; /* Add space below h2 */
+    color: #0066cc; /* Blue color for header */
+}
+
+/* Input Groups */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* Unified Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select,
+input[type="file"] {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Uniform padding */
+    padding-left: 40px; /* Space for icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    line-height: 1.5; /* Improve line height for readability */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+select {
+    height: 40px; /* Ensure select input has the same height as other inputs */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    background-color: #0066cc; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Summary Container */
+#summary-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Summary Section */
+#summary-section h2 {
+    margin-bottom: 5px; /* Add space below h2 */
+    color: #0066cc; /* Blue color for header */
+}
+
+#summary-data {
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray background for summary data */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space below summary data */
+}
+
+/* Centered Button */
+.summary-button {
+    display: inline-flex; /* Use inline-flex for button alignment */
+    align-items: center; /* Center button text vertically */
+    padding: 10px 15px;
+    background-color: #0066cc; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Add space between buttons */
+}
+.summary-button i{
+    margin-right: 0.5rem; 
+}
+
+.summary-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Report Button Specific Styles */
+#report-button {
+    background-color: #e74c3c; /* Red background */
+    color: white; /* White text */
+    font-family: 'Arial', sans-serif; /* Use Arial font */
+}
+
+#report-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Keep header items in a row */
+        justify-content: space-between; /* Space between title and button */
+        align-items: center; /* Center items vertically */
+    }
+
+    header h1 {
+        margin: 0; /* Maintain margin for title */
+    }
+
+    header button {
+        margin: 0; /* No margin needed for button */
+    }
+}
+
+
+/* Timer Message Styling */
+.timer-message {
+    color: #f0e68c; /* Yellowish color for visibility */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: none; /* Hide by default */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.modal-content button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Popup Modal Styles */
+.popup-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay effect */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+}
+
+.success-icon {
+    font-size: 50px;
+    color: green;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Table Container Styling to Match Other Sections */
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    padding: 20px; /* Matches padding with other sections */
+    margin: 0 auto 30px; /* Center-align and add space below */
+    max-width: 800px; /* Same max-width as other sections */
+    width: 100%; /* Full width within max-width */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+    font-family: Arial, sans-serif;
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Full width within container */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #0066cc; /* Consistent blue */
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+th {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.method-bkash {
+    color: #d63384;
+    font-weight: bold;
+}
+
+.method-nogod {
+    color: #00a65a;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 15px;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        font-size: 0.8rem;
+    }
+}
+
+
+

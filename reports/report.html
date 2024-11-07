@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Submission | Dark Alliance Fund Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Report Submission</h1>
+        <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </header>
+
+    <div id="report-section">
+        <h2>Send a Report</h2>
+        <input type="text" id="name" placeholder="Enter your name here" required>
+        <input type="email" id="email" placeholder="Enter your email here" required>
+        <textarea id="reportMessage" rows="4" placeholder="Enter your report message here..."></textarea>
+        <button onclick="sendReport()" class="send-button"><i class="fas fa-paper-plane"></i> Send Report</button>
+    </div>
+    
+    <script src="script.js">
+    </script>
+    
+</body>
+</html>

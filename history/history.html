@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission History | Dark Alliance Fund Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Submission History</h1>
+            <button onclick="window.location.href='../index.html'">Home</button>
+        </header>
+
+        <div id="history-section">
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Holder's Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- History data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer section with the Clear History button positioned at the bottom -->
+<!-- <div class="footer">
+    <button onclick="clearHistory()" class="clear-history-button">Clear History</button>
+</div> -->
+
+    <script>
+        if (!sessionStorage.getItem("isLoggedIn")) {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+    <script src="history.js"></script>
+</body>
+</html>

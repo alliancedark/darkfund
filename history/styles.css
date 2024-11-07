@@ -1,0 +1,130 @@
+/* General Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+html, body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    width: 100%; /* Ensure no extra space */
+}
+
+/* Main Content Area */
+.content {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Adds padding to keep content away from screen edges */
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #4CAF50; /* Green color */
+    font-weight: bold;
+}
+
+header button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+header button:hover {
+    background-color: #388E3C;
+}
+
+/* Section Heading */
+#history-section h2 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    color: #333;
+}
+
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td, th {
+    padding: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header {
+        padding: 0 10px; /* Adds padding on mobile so the header doesn’t touch the edges */
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header button {
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+

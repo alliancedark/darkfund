@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Dark Alliance Fund Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Alliance Fund Submission</h1>
+            <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </header>
+
+    <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>holders Name</th>
+          <th>Number</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+          <td>Sohanur</td>
+          <td>01871058682</td>
+          <td class="method-nogod">Nogod</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color: red;font-family: monospace;font-size: 12px;">সতর্কতা: আপনি অন্য নম্বর পাঠালে দায়ি আপনার । যেকোনো সময় holders number change  হতে পারে অবশ্যই login করে check করে নিবেন ।</p>
+  </div>
+
+        <div id="form-section">
+            <h2>Payment Submit Form</h2>
+            <form id="contributionForm" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="holderName" name="holderName" placeholder="Holder's Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-money-check-alt"></i>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="" disabled selected>Select Payment Method</option>
+                        <option value="bkash">Bkash</option>
+                        <option value="nogod">Nogod</option>
+                        <option value="hand">Hand</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-coins"></i>
+                    <input type="number" id="amount" name="amount" placeholder="Amount" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="your Payment Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-hashtag"></i>
+                    <input type="text" id="transactionId" name="transactionId" placeholder="Transaction ID" required>
+                </div>
+                <div class="input-group">
+                    <!-- <i class="fas fa-image"></i> -->
+                    <!-- <input type="file" id="screenshot" name="screenshot" accept="image/*"> --> <p style="color: red;">screenshot function coming.....</p>
+                </div>
+                <button type="submit" id="submitButton"><i class="fas fa-paper-plane"></i> Submit</button>
+
+            </form>
+        </div>
+
+        <div class="button-container" style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button id="report-button" onclick="window.location.href='../reports/report.html'" class="summary-button">
+                <i class="fas fa-bug"></i> সমস্যা / আবেদন
+            </button>
+            <button onclick="window.location.href='../history/history.html'" class="summary-button">
+                <i class="fas fa-chart-bar"></i> History
+            </button>
+        </div>
+    </div>
+<!-- Popup Modal for Success Message -->
+<div id="popupModal" class="popup-modal">
+    <div class="popup-content">
+        <i class="fas fa-check-circle success-icon"></i>
+        <p>submitted successfully!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+
+<script>
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        window.location.href = "../index.html";
+    }
+</script>
+
+<!--  -->
+</body>
+</html>
